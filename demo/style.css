@@ -1,0 +1,13 @@
+/* Global styles */
+
+body {
+  font-family: sans-serif;
+  background: #EEE;
+  color: #555;
+}
+
+main {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 20px;
+}
