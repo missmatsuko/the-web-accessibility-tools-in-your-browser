@@ -2,12 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Demo 3: Emulate prefers-reduced-motion and prefers-color-scheme</title>
+    <title>Demo 3: Emulate CSS preferences</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* Page-specific styles */
+      @media (prefers-reduced-motion: no-preference) {
+        .loader {
+          width: 2rem;
+          height: 2rem;
+          border: 5px solid blue;
+          border-bottom-color: lightgray;
+          border-radius: 100%;
+          animation: rotate 2s infinite;
+        }
+
+        .loader p {
+          clip: rect(0 0 0 0);
+          clip-path: inset(50%);
+          height: 1px;
+          overflow: hidden;
+          position: absolute;
+          white-space: nowrap;
+          width: 1px;
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
     <main>
-      <h1>Demo 3: Emulate prefers-reduced-motion and prefers-color-scheme</h1>
+      <h1>Demo 3: Emulate CSS preferences</h1>
+
+      <h2>Instructions</h2>
+
+      <h3>Emulate CSS preferences</h3>
+
+      <h4>Chrome</h4>
+      <ol>
+      <li>Open this page in Chrome.</li>
+        <li>Open dev tools.</li>
+        <li>Go to the "Rendering" tab.<br>
+            <small>Note: If you don't already have this tab available, click the three dots ("More Tools") next to the "Console" tab and check "Rendering".</small>
+        </li>
+        <li>Make selections for "Emulate CSS media feature prefers-color scheme" and "Emulate CSS media feature prefers-reduced-motion".</li>
+      </ol>
+
+      <h4>Firefox</h4>
+      <ol>
+        <li>Open this page in Firefox.</li>
+        <li>Open dev tools.</li>
+        <li>Click the sun or moon icon ("Toggle light/dark color scheme simulation for this page").</li>
+      </ol>
+
+      <h2>Activity</h2>
+
+      <div class="loader">
+        <p>Loading...</p>
+      </div>
+
     </main>
   </body>
 </html>
