@@ -4,10 +4,100 @@
     <meta charset="utf-8">
     <title>Demo 1: Accessibility auditor and inspector</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* Page-specific styles */
+      .label,
+      .instructions {
+        display: block;
+      }
+
+      .label {
+        font-weight: bold;
+      }
+
+      .instructions {
+        font-size: smaller;
+        margin-top: -0.3rem;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        max-width: 15rem;
+        margin-bottom: 1rem;
+      }
+
+      img {
+        width: 20rem;
+      }
+    </style>
   </head>
   <body>
     <main>
       <h1>Demo 1: Accessibility auditor and inspector</h1>
+
+      <h2>Instructions</h2>
+
+      <h3>Run audits</h3>
+
+      <h4>Chrome</h4>
+      <ol>
+        <li>Open this page in Chrome.</li>
+        <li>Open dev tools.</li>
+        <li>Go to the "Lighthouse" tab.</li>
+        <li>Check "Accessibility" in "Categories.</li>
+        <li>Click "Generate report".</li>
+      </ol>
+
+      <h4>Firefox</h4>
+      <ol>
+        <li>Open this page in Firefox.</li>
+        <li>Open dev tools.</li>
+        <li>Go to the "Accessibility" tab.</li>
+        <li>Select "All Issues" for "Check for issues".</li>
+      </ol>
+
+      <h3>Inspect accessibility</h3>
+
+      <h4>Chrome</h4>
+      <ol>
+        <li>Open this page in Firefox.</li>
+        <li>Open dev tools.</li>
+        <li>Go to the "Accessibility" tab.</li>
+      </ol>
+
+      <h4>Firefox</h4>
+      <ol>
+        <li>Open this page in Firefox.</li>
+        <li>Open dev tools.</li>
+        <li>Go to the "Accessibility" tab.</li>
+      </ol>
+
+      <h2>Activity</h2>
+
+      <h3>Form</h3>
+
+      <img src="assets/coffee.jpg" height="333" width="500" />
+
+      <p>Subscribe now and get a coupon for a free small tea or coffee!</p>
+
+      <form onsubmit="return false;">
+        <label>
+          <span id="name-label" class="label">Name</span>
+          <span id="name-instructions" class="instructions">Enter your full name</span>
+          <input
+            type="text"
+            title="Full name"
+          />
+        </label>
+        <label>
+          <span class="label">Email address</span>
+          <input
+            type="email"
+          />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
     </main>
   </body>
 </html>
