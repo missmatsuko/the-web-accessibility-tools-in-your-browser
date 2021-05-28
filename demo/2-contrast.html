@@ -4,10 +4,98 @@
     <meta charset="utf-8">
     <title>Demo 2: Contrast checker and vision simulator</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* Page-specific styles */
+      .box {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        font-weight: bold;
+        padding: 4rem 2rem;
+        margin: 1rem 0;
+        text-align: center;
+      }
+
+      strong {
+        text-transform: uppercase;
+      }
+
+      .box-1 {
+        background-color: red;
+        color: green;
+        margin-top: 0;
+      }
+
+      .box-2 {
+        background-color: red;
+        background: linear-gradient(90deg, green, yellow, red, purple, blue);
+        color: green;
+      }
+
+      .box-3 {
+        background-color: red;
+        background-image: url(assets/rainbow.jpg);
+        background-size: cover;
+        background-position: center center;
+        color: green;
+      }
+    </style>
   </head>
   <body>
     <main>
       <h1>Demo 2: Contrast checker and vision simulator</h1>
+
+      <h2>Instructions</h2>
+
+      <h3>Check contrast ratios</h3>
+
+      <h4>Chrome</h4>
+      <ol>
+        <li>Open this page in Chrome.</li>
+        <li>Open dev tools.</li>
+        <li>Inspect the element.</li>
+        <li>In the "Styles" tab, click the colour swatch next to the value for <code>color</code>.</li>
+      </ol>
+
+      <h4>Firefox</h4>
+      <ol>
+        <li>Open this page in Firefox.</li>
+        <li>Open dev tools.</li>
+        <li>Go to the "Accessibility" tab.</li>
+        <li>Navigate to the item in the accessibility tree.</li>
+      </ol>
+
+      <h3>Simulate vision</h3>
+
+      <h4>Chrome</h4>
+      <ol>
+        <li>Open this page in Chrome.</li>
+        <li>Open dev tools.</li>
+        <li>Go to the "Rendering" tab.<br>
+            <small>Note: If you don't already have this tab available, click the three dots ("More Tools") next to the "Console" tab and check "Rendering".</small>
+        </li>
+        <li>Make a selection for "Emulate vision deficiencies".</li>
+      </ol>
+
+      <h4>Firefox</h4>
+      <ol>
+        <li>Open this page in Firefox.</li>
+        <li>Open dev tools.</li>
+        <li>Go to the "Accessibility" tab.</li>
+        <li>Make a selection for "Simulate".</li>
+      </ol>
+
+      <h2>Activity</h2>
+      <div class="box box-1">
+        <p>The first rule of ARIA is:<br> you don't use ARIA.</p>
+      </div>
+
+      <div class="box box-2">
+        <p>The second rule of ARIA is:<br> <strong>you do not use ARIA</strong>.</p>
+      </div>
+
+      <div class="box box-3">
+        <p>The third rule of ARIA is:<br> learn to use ARIA <em>correctly</em>.</p>
+      </div>
     </main>
   </body>
 </html>
